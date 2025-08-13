@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos</title>
+    <link rel="stylesheet" href="Proyectos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i><i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" class="active" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">PROYECTOS</h1>
+                <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder=""><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="projects-container">
+                <div class="projects-toolbar">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="in-progress">En Progreso</button>
+                        <button class="filter-btn" data-filter="completed">Completados</button>
+                    </div>
+                </div>
+
+                <div class="projects-grid" id="projects-grid">
+                    <article class="project-card" data-status="completed" data-progress="100">
+                        <div class="card-header">
+                            <h3 class="project-title">Python para Data Science</h3>
+                            <span class="project-category">Data Science</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="progress-label">Progreso del curso:</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                            <span class="progress-percentage">100%</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="project-button continue-btn">Continuar Curso</button>
+                            <button class="project-button certificate-btn">Descargar Certificado</button>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-status="in-progress" data-progress="65">
+                        <div class="card-header">
+                            <h3 class="project-title">Desarrollo Web Full-Stack</h3>
+                            <span class="project-category">Desarrollo Web</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="progress-label">Progreso del curso:</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                            <span class="progress-percentage">65%</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="project-button continue-btn">Continuar Curso</button>
+                            <button class="project-button certificate-btn">Descargar Certificado</button>
+                        </div>
+                    </article>
+
+                     <article class="project-card" data-status="in-progress" data-progress="30">
+                        <div class="card-header">
+                            <h3 class="project-title">Fundamentos de Ciberseguridad</h3>
+                            <span class="project-category">Seguridad</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="progress-label">Progreso del curso:</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill"></div>
+                            </div>
+                            <span class="progress-percentage">30%</span>
+                        </div>
+                        <div class="card-footer">
+                            <button class="project-button continue-btn">Continuar Curso</button>
+                            <button class="project-button certificate-btn">Descargar Certificado</button>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="empty-state" id="empty-state">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>No tienes proyectos aún</h3>
+                    <p>Explora nuestros cursos y empieza a aprender hoy mismo.</p>
+                    <button class="explore-courses-btn">Ver Cursos</button>
+                </div>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+    
+    <!-- ===== VENTANA MODAL para Certificado (Oculta por defecto) ===== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="certificate-modal">
+            <div class="modal-header">
+                <h2 class="modal-title">¡Felicitaciones!</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <i class="fas fa-award success-icon"></i>
+                <p class="modal-description">Has completado con éxito el curso de <strong id="course-name-modal"></strong>. Ahora puedes descargar tu certificado.</p>
+                <button class="modal-action-btn" id="download-pdf-btn">Descargar PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Proyectos.js"></script>
+</body>
+</html>

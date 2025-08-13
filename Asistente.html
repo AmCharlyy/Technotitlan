@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente IA Responsivo</title>
+    <link rel="stylesheet" href="Asistente.css">
+    <!-- Font Awesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <!-- Botón unificado para abrir y cerrar -->
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i>
+                    <i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" class="active" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    
+                    <div class="divider"></div>
+                    
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+
+                    <div class="divider"></div>
+
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">ASISTENTE</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="assistant-container">
+                <div class="robot-illustration">
+                    <svg width="150" height="150" viewBox="0 0 162 163" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M41.86 33.72c-3.52-3.1-7.7-5.1-12.23-5.6M32.89 19.32c1.76-5.49 5.86-10.11 11.21-12.72M57.9 4.33c5.49 0 10.66 2.09 14.51 5.86M84.64 4.33c5.49 0 10.66 2.09 14.51 5.86M106.77 12.3c5.35 2.61 9.45 7.23 11.21 12.72M125.84 28.12c-4.52.5-8.71 2.5-12.23 5.6M137.67 47.95c.5 4.52-1.5 8.71-4.6 12.23M137.67 73.18c.5 4.52-1.5 8.71-4.6 12.23M131.57 95.91c-3.1 3.52-5.1 7.7-5.6 12.23M116.34 118.64c-2.61 5.35-7.23 9.45-12.72 11.21M98.81 133.18c-3.85 3.76-9.02 5.86-14.51 5.86M67.92 133.18c-3.85 3.76-9.02 5.86-14.51 5.86M45.8 127.11c-5.35-2.61-9.45-7.23-11.21-12.72M26.73 105.14c-4.52-.5-8.71-2.5-12.23-5.6M24.63 88.01c-.5-4.52 1.5-8.71 4.6-12.23M24.63 62.78c-.5-4.52 1.5-8.71 4.6-12.23M82.32 23.13c-.73-.24-1.5-.37-2.29-.37-3.79 0-6.86 3.07-6.86 6.86v2.74c0 3.79 3.07 6.86 6.86 6.86h2.74c3.79 0 6.86-3.07 6.86-6.86 0-3.79-3.07-6.86-6.86-6.86h-2.74c-1.26 0-2.46.34-3.48.94" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M123.86 70.33c0-10.7-8.66-19.37-19.37-19.37H57.5c-10.7 0-19.37 8.67-19.37 19.37v22.25c0 10.7 8.67 19.37 19.37 19.37h46.99c10.7 0 19.37-8.67 19.37-19.37V70.33Z" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M68.03 70.33c0-3.03 2.45-5.48 5.48-5.48s5.48 2.45 5.48 5.48-2.45 5.48-5.48 5.48-5.48-2.45-5.48-5.48ZM92.99 70.33c0-3.03 2.45-5.48 5.48-5.48s5.48 2.45 5.48 5.48-2.45 5.48-5.48 5.48-5.48-2.45-5.48-5.48Z" fill="#B0B9C4"></path><path d="M73.51 86.84h17.29" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M82.16 86.84c-3.13-1.66-5.22-4.99-5.22-8.77" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M49.37 98.43v24.26c0 3.79-3.07 6.86-6.86 6.86h-2.74c-3.79 0-6.86-3.07-6.86-6.86v-1.37c0-3.79 3.07-6.86 6.86-6.86h1.37" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M30.17 103.91H20.8c-2.61 0-4.73-2.12-4.73-4.73v-8.22c0-2.61 2.12-4.73 4.73-4.73h9.37" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M26.29 86.23v-2.74M26.29 94.48v-2.74" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M112.63 98.43v24.26c0 3.79 3.07 6.86 6.86 6.86h2.74c3.79 0 6.86-3.07 6.86-6.86v-1.37c0-3.79-3.07-6.86-6.86-6.86h-1.37" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M129.09 98.43c-3.79 0-6.86-3.07-6.86-6.86 0 3.79 3.07 6.86 6.86 6.86Z" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M120.84 89.65a5.48 5.48 0 0 1 5.48-5.48" stroke="#B0B9C4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                
+                <div class="action-buttons">
+                    <button><i class="fas fa-microphone-lines"></i> Voice Mode</button>
+                    <button><i class="fas fa-wand-magic-sparkles"></i> Customise IA</button>
+                    <button><i class="fas fa-folder-plus"></i> Create Proyect</button>
+                    <button><i class="fas fa-file-lines"></i> Docs</button>
+                    <button class="icon-only-btn"><i class="fas fa-camera"></i></button>
+                </div>
+
+                <div class="prompt-area">
+                    <input type="text" placeholder="Pregunta lo que quieras">
+                </div>
+            </div>
+
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="Asistente.js"></script>
+</body>
+</html>

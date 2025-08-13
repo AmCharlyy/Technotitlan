@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Dashboard</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i><i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" class="active" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">INICIO</h1>
+                <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder=""><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="dashboard-container" id="dashboard-container">
+                <!-- Tarjeta 1 -->
+                <article class="course-card">
+                    <div class="card-background">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070" alt="Código de programación">
+                    </div>
+                    <div class="progress-circle" data-progress="75">
+                        <svg class="progress-ring" width="60" height="60">
+                           <circle class="progress-ring-bg" stroke-width="6" r="24" cx="30" cy="30" />
+                           <circle class="progress-ring-fg" stroke-width="6" r="24" cx="30" cy="30" />
+                        </svg>
+                        <span class="progress-text">75%</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Desarrollo Web Full-Stack</h3>
+                        <p>Domina HTML, CSS, JavaScript, Node.js y React para crear aplicaciones web completas.</p>
+                        <button class="card-button">Continuar Curso</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                 <article class="course-card">
+                    <div class="card-background">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070" alt="Ciberseguridad">
+                    </div>
+                    <div class="progress-circle" data-progress="50">
+                        <svg class="progress-ring" width="60" height="60">
+                           <circle class="progress-ring-bg" stroke-width="6" r="24" cx="30" cy="30" />
+                           <circle class="progress-ring-fg" stroke-width="6" r="24" cx="30" cy="30" />
+                        </svg>
+                        <span class="progress-text">50%</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Introducción a la Ciberseguridad</h3>
+                        <p>Aprende a proteger sistemas, redes y programas de ataques digitales.</p>
+                        <button class="card-button">Continuar Curso</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                 <article class="course-card">
+                    <div class="card-background">
+                        <img src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=1974" alt="Inteligencia Artificial">
+                    </div>
+                     <div class="progress-circle" data-progress="20">
+                        <svg class="progress-ring" width="60" height="60">
+                           <circle class="progress-ring-bg" stroke-width="6" r="24" cx="30" cy="30" />
+                           <circle class="progress-ring-fg" stroke-width="6" r="24" cx="30" cy="30" />
+                        </svg>
+                        <span class="progress-text">20%</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Inteligencia Artificial y Machine Learning</h3>
+                        <p>Explora los fundamentos de la IA y crea tus primeros modelos predictivos.</p>
+                        <button class="card-button">Empezar Curso</button>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="course-card">
+                    <div class="card-background">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070" alt="Análisis de datos">
+                    </div>
+                     <div class="progress-circle" data-progress="95">
+                        <svg class="progress-ring" width="60" height="60">
+                           <circle class="progress-ring-bg" stroke-width="6" r="24" cx="30" cy="30" />
+                           <circle class="progress-ring-fg" stroke-width="6" r="24" cx="30" cy="30" />
+                        </svg>
+                        <span class="progress-text">95%</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Análisis de Datos con Python</h3>
+                        <p>Utiliza Pandas, Matplotlib y Seaborn para procesar y visualizar datos.</p>
+                        <button class="card-button">Finalizar Curso</button>
+                    </div>
+                </article>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="Inicio.js"></script>
+</body>
+</html>

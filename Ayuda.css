@@ -1,0 +1,48 @@
+/* --- ESTILOS GLOBALES Y DEL SIDEBAR (Sin cambios, pero incluidos para completitud) --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root { --dark-blue: #191937; --light-blue-active: #2a2a4a; --main-bg: #f4f6f9; --text-light: #e0e0e0; --text-dark: #333; --border-color: #e1e4e8; --accent-purple: #6c5ce7; --sidebar-width-expanded: 260px; --sidebar-width-collapsed: 88px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background-color: var(--main-bg); color: var(--text-dark); overflow-x: hidden; border-top: 3px solid var(--accent-purple); }
+.container { display: flex; min-height: calc(100vh - 3px); }
+/* ... Resto de estilos del sidebar sin cambios ... */
+.sidebar { width: var(--sidebar-width-expanded); background-color: var(--dark-blue); color: var(--text-light); display: flex; flex-direction: column; padding: 15px; flex-shrink: 0; transition: width 0.3s ease-in-out; position: relative; z-index: 100; }
+.sidebar.collapsed { width: var(--sidebar-width-collapsed); }
+.sidebar-header{display:flex;justify-content:flex-end;align-items:center;margin-bottom:30px;padding:0 5px}.toggle-btn{background:transparent;border:none;color:var(--text-light);font-size:24px;cursor:pointer;width:30px;height:30px;position:relative}.toggle-btn .icon-menu{display:none}.toggle-btn .icon-close{display:block}.sidebar.collapsed .toggle-btn .icon-menu{display:block}.sidebar.collapsed .toggle-btn .icon-close{display:none}.sidebar.collapsed .sidebar-header{justify-content:center}.sidebar-nav ul{list-style:none}.sidebar-nav a{display:flex;align-items:center;padding:12px 15px;color:var(--text-light);text-decoration:none;border-radius:8px;margin-bottom:5px;transition:background-color .2s ease;white-space:nowrap;overflow:hidden}.sidebar-nav a:hover,.sidebar-nav a.active{background-color:var(--light-blue-active)}.sidebar-nav a i{font-size:20px;min-width:28px;text-align:center;margin-right:20px;transition:margin .3s ease-in-out}.sidebar-nav a span{font-size:16px;opacity:1;transition:opacity .2s ease-in-out}.sidebar.collapsed .sidebar-nav a{justify-content:center;padding:12px 10px}.sidebar.collapsed .sidebar-nav a i{margin-right:0}.sidebar.collapsed .sidebar-nav a span{opacity:0;width:0;pointer-events:none}.divider{height:1px;background-color:var(--light-blue-active);margin:20px 0;transition:margin .3s ease-in-out}
+
+/* --- ESTILOS DEL CONTENIDO PRINCIPAL Y FOOTER --- */
+.main-content { flex-grow: 1; display: flex; flex-direction: column; padding: 0 40px; }
+.main-footer-bottom { text-align: center; padding: 20px 0; font-size: 14px; color: #888; border-top: 1px solid var(--border-color); margin-top: auto; }
+
+/* --- NUEVOS ESTILOS PARA EL CENTRO DE AYUDA --- */
+.help-center-container { padding: 40px 0; }
+.hero-section { text-align: center; margin-bottom: 50px; }
+.hero-section h1 { font-size: 28px; font-weight: 500; margin-bottom: 20px; }
+.search-container { position: relative; max-width: 600px; margin: 0 auto; }
+.search-container i { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #aaa; }
+.search-container input { width: 100%; padding: 15px 20px 15px 50px; border-radius: 30px; border: 1px solid var(--border-color); font-size: 16px; outline: none; }
+.search-container input:focus { border-color: var(--accent-purple); box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2); }
+
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 50px; }
+.category-card { background-color: var(--dark-blue); color: var(--text-light); padding: 25px; border-radius: 15px; text-decoration: none; text-align: center; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.category-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(25, 25, 55, 0.15); }
+.category-card i { font-size: 28px; margin-bottom: 15px; }
+.category-card h4 { font-size: 18px; margin-bottom: 5px; }
+.category-card p { font-size: 14px; color: #ccc; line-height: 1.4; }
+
+.faq-section { max-width: 800px; margin: 0 auto 50px auto; }
+.faq-section h2 { text-align: center; font-size: 24px; font-weight: 500; margin-bottom: 30px; }
+.faq-item { border-bottom: 1px solid var(--border-color); }
+.faq-question { width: 100%; background: none; border: none; text-align: left; padding: 20px 0; font-size: 18px; font-weight: 500; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-question i { transition: transform 0.3s ease; }
+.faq-item.active .faq-question i { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; }
+.faq-answer p { color: #555; line-height: 1.6; padding-bottom: 20px; }
+.faq-item.active .faq-answer { max-height: 200px; /* Ajusta si las respuestas son más largas */ }
+
+.contact-section { text-align: center; background-color: #fff; padding: 40px; border-radius: 15px; }
+.contact-section h2 { font-size: 22px; font-weight: 500; margin-bottom: 10px; }
+.contact-section p { color: #666; margin-bottom: 20px; }
+.contact-button { background-color: var(--accent-purple); color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; }
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) { .main-content { padding: 0 15px; } }

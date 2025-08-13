@@ -1,0 +1,56 @@
+/* --- ESTILOS GLOBALES Y DEL SIDEBAR (Sin cambios, pero incluidos para completitud) --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root { --dark-blue: #191937; --light-blue-active: #2a2a4a; --main-bg: #f4f6f9; --text-light: #e0e0e0; --text-dark: #333; --border-color: #e1e4e8; --accent-purple: #6c5ce7; --sidebar-width-expanded: 260px; --sidebar-width-collapsed: 88px; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background-color: var(--main-bg); color: var(--text-dark); overflow-x: hidden; border-top: 3px solid var(--accent-purple); }
+.container { display: flex; min-height: calc(100vh - 3px); }
+/* ... Resto de estilos del sidebar sin cambios ... */
+.sidebar { width: var(--sidebar-width-expanded); background-color: var(--dark-blue); color: var(--text-light); display: flex; flex-direction: column; padding: 15px; flex-shrink: 0; transition: width 0.3s ease-in-out; position: relative; z-index: 100; }
+.sidebar.collapsed { width: var(--sidebar-width-collapsed); }
+.sidebar-header{display:flex;justify-content:flex-end;align-items:center;margin-bottom:30px;padding:0 5px}.toggle-btn{background:transparent;border:none;color:var(--text-light);font-size:24px;cursor:pointer;width:30px;height:30px;position:relative}.toggle-btn .icon-menu{display:none}.toggle-btn .icon-close{display:block}.sidebar.collapsed .toggle-btn .icon-menu{display:block}.sidebar.collapsed .toggle-btn .icon-close{display:none}.sidebar.collapsed .sidebar-header{justify-content:center}.sidebar-nav ul{list-style:none}.sidebar-nav a{display:flex;align-items:center;padding:12px 15px;color:var(--text-light);text-decoration:none;border-radius:8px;margin-bottom:5px;transition:background-color .2s ease;white-space:nowrap;overflow:hidden}.sidebar-nav a:hover,.sidebar-nav a.active{background-color:var(--light-blue-active)}.sidebar-nav a i{font-size:20px;min-width:28px;text-align:center;margin-right:20px;transition:margin .3s ease-in-out}.sidebar-nav a span{font-size:16px;opacity:1;transition:opacity .2s ease-in-out}.sidebar.collapsed .sidebar-nav a{justify-content:center;padding:12px 10px}.sidebar.collapsed .sidebar-nav a i{margin-right:0}.sidebar.collapsed .sidebar-nav a span{opacity:0;width:0;pointer-events:none}.divider{height:1px;background-color:var(--light-blue-active);margin:20px 0;transition:margin .3s ease-in-out}
+
+/* --- ESTILOS DEL CONTENIDO PRINCIPAL Y HEADER --- */
+.main-content { flex-grow: 1; display: flex; flex-direction: column; padding: 0 40px; }
+.main-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+.page-title, .header-actions, .search-bar, .icon-btn, .profile-btn, .main-footer-bottom { /* ... Estilos del header sin cambios ... */ }
+.page-title{font-size:20px;color:#555;font-weight:500;letter-spacing:1px}.header-actions{display:flex;align-items:center;gap:15px}.search-bar{position:relative}.search-bar input{width:250px;padding:10px 15px;border:1px solid var(--border-color);border-radius:20px;outline:none}.icon-btn{background-color:#fff;border:1px solid var(--border-color);width:40px;height:40px;border-radius:50%;display:flex;justify-content:center;align-items:center;font-size:16px;cursor:pointer;color:var(--text-dark)}.profile-btn{background-color:var(--dark-blue)}.main-footer-bottom{text-align:center;padding:20px 0;font-size:14px;color:#888;border-top:1px solid var(--border-color);margin-top:auto}
+
+/* --- NUEVOS ESTILOS PARA EL CATÁLOGO DE CURSOS --- */
+.course-catalog-container { padding: 20px 0; }
+.category-section { margin-bottom: 40px; }
+.category-title { font-size: 22px; font-weight: 500; margin-bottom: 20px; }
+.category-wrapper { position: relative; }
+.course-carousel { display: flex; gap: 25px; overflow-x: auto; padding: 10px; scroll-behavior: smooth; /* Ocultar barra de scroll */ scrollbar-width: none; }
+.course-carousel::-webkit-scrollbar { display: none; }
+.course-item-card { background-color: #fff; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); min-width: 280px; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.course-item-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.card-image { height: 150px; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px; }
+.card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-content h3 { font-size: 18px; margin-bottom: 10px; }
+.card-content p { font-size: 14px; color: #666; line-height: 1.5; flex-grow: 1; }
+.card-meta { margin-top: 15px; }
+.tag { background-color: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 15px; font-size: 12px; font-weight: 500; }
+.card-actions { margin-top: 20px; display: flex; gap: 10px; }
+.btn-primary, .btn-secondary { border-radius: 20px; padding: 10px 15px; font-weight: bold; cursor: pointer; border: 1px solid; transition: all 0.2s ease; }
+.btn-primary { background-color: var(--dark-blue); color: var(--text-light); border-color: var(--dark-blue); }
+.btn-primary:hover { background-color: #2a2a4a; }
+.btn-secondary { background-color: transparent; color: var(--dark-blue); border-color: var(--dark-blue); }
+.btn-secondary:hover { background-color: var(--dark-blue); color: var(--text-light); }
+.scroll-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: #fff; border: 1px solid var(--border-color); border-radius: 50%; width: 40px; height: 40px; z-index: 10; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1); display: none; opacity: 0; transition: opacity 0.3s; }
+.scroll-btn.left { left: -20px; }
+.scroll-btn.right { right: -20px; }
+.scroll-btn.visible { display: flex; justify-content: center; align-items: center; opacity: 1; }
+.category-wrapper:hover .scroll-btn.visible { opacity: 1; }
+
+/* --- ESTILOS DE LA MODAL DE TEMARIO --- */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); display: none; justify-content: center; align-items: center; z-index: 1000; opacity: 0; transition: opacity 0.3s ease; }
+.modal-overlay.active { display: flex; opacity: 1; }
+.modal { background: white; padding: 25px; border-radius: 12px; width: 90%; max-width: 500px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transform: scale(0.95); transition: transform 0.3s ease; }
+.modal-overlay.active .modal { transform: scale(1); }
+.modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+.modal-title { font-size: 20px; color: var(--text-dark); }
+.modal-close { background: none; border: none; font-size: 28px; color: #aaa; cursor: pointer; }
+#modal-body ul { list-style: none; padding-left: 0; }
+#modal-body li { background-color: #f9f9f9; border-radius: 8px; padding: 12px 15px; margin-bottom: 8px; opacity: 0; transform: translateX(-20px); animation: fadeInItem 0.5s forwards; }
+@keyframes fadeInItem { to { opacity: 1; transform: translateX(0); } }

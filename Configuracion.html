@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <link rel="stylesheet" href="Configuracion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i><i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" class="activeç" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">CONFIGURACION</h1>
+                <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder=""><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="settings-container">
+                <!-- Configuración General -->
+                <section>
+                    <h3>CONFIGURACION GENERAL</h3>
+                    <div class="setting-item">
+                        <label for="sound-toggle">SONIDO</label>
+                        <label class="toggle-switch"><input type="checkbox" id="sound-toggle" checked></label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="notifications-toggle">NOTIFICACIONES</label>
+                        <label class="toggle-switch"><input type="checkbox" id="notifications-toggle" checked></label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="theme-toggle">TEMA</label>
+                        <label class="toggle-switch"><input type="checkbox" id="theme-toggle" checked></label>
+                    </div>
+                </section>
+
+                <!-- Privacidad y Seguridad -->
+                <section>
+                    <h3>PRIVACIDAD Y SEGURIDAD</h3>
+                    <div class="setting-item">
+                        <a href="#" id="control-cookies-link">CONTROL DE COOKIES</a>
+                    </div>
+                    <div class="setting-item">
+                        <label for="data-share-toggle">PERMISO PARA COMPARTIR DATOS</label>
+                        <label class="toggle-switch"><input type="checkbox" id="data-share-toggle" checked></label>
+                    </div>
+                </section>
+
+                <!-- Suscripciones o Membresía -->
+                <section>
+                    <h3>SUSCRIPCIONES O MEMBRESIA</h3>
+                    <div class="setting-item">
+                        <a href="#" id="cambiar-plan-link">CAMBIAR PLAN</a>
+                    </div>
+                    <div class="setting-item no-border">
+                        <a href="#" id="actualizar-pago-link">ACTUALIZAR MÉTODO DE PAGO</a>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ===== VENTANAS MODALES (Ocultas por defecto) ===== -->
+    <div class="modal-overlay" id="modal-overlay">
+        
+        <!-- Modal para Control de Cookies -->
+        <div class="modal" id="modal-cookies">
+            <div class="modal-header"><h2 class="modal-title">Control de Cookies</h2><button class="modal-close">&times;</button></div>
+            <div class="modal-body">
+                <p class="modal-description">Gestiona tus preferencias de cookies. Algunas cookies son necesarias para el funcionamiento del sitio.</p>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies Necesarias</strong>
+                        <small>Esenciales para la seguridad y funciones básicas.</small>
+                    </div>
+                    <label class="toggle-switch"><input type="checkbox" checked disabled></label>
+                </div>
+                <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de Análisis</strong>
+                        <small>Nos ayudan a entender cómo usas el sitio.</small>
+                    </div>
+                    <label class="toggle-switch"><input type="checkbox" checked></label>
+                </div>
+                 <div class="cookie-option">
+                    <div>
+                        <strong>Cookies de Marketing</strong>
+                        <small>Usadas para mostrarte anuncios relevantes.</small>
+                    </div>
+                    <label class="toggle-switch"><input type="checkbox"></label>
+                </div>
+                <button class="modal-action-btn">Guardar Preferencias</button>
+            </div>
+        </div>
+
+        <!-- Modal para Cambiar Plan -->
+        <div class="modal" id="modal-plan">
+             <div class="modal-header"><h2 class="modal-title">Cambiar Plan</h2><button class="modal-close">&times;</button></div>
+             <div class="modal-body">
+                <div class="plan-option" data-plan="basico">
+                    <h4>Básico</h4>
+                    <p class="price">Gratis</p>
+                    <ul><li>Acceso limitado</li><li>Simulador básico</li></ul>
+                </div>
+                <div class="plan-option selected" data-plan="pro">
+                    <h4>Pro</h4>
+                    <p class="price">$9.99/mes</p>
+                    <ul><li>Acceso completo</li><li>Simulador avanzado</li><li>Soporte prioritario</li></ul>
+                </div>
+                <div class="plan-option" data-plan="premium">
+                    <h4>Premium</h4>
+                    <p class="price">$19.99/mes</p>
+                    <ul><li>Todo en Pro</li><li>Cursos exclusivos</li><li>Consultas IA</li></ul>
+                </div>
+                <button class="modal-action-btn">Seleccionar Plan</button>
+             </div>
+        </div>
+
+        <!-- Modal para Actualizar Método de Pago -->
+        <div class="modal" id="modal-payment">
+             <div class="modal-header"><h2 class="modal-title">Método de Pago</h2><button class="modal-close">&times;</button></div>
+             <div class="modal-body">
+                <form class="payment-form">
+                    <div class="form-row">
+                        <label for="card-name">Nombre en la tarjeta</label>
+                        <input type="text" id="card-name" placeholder="Juan Pérez">
+                    </div>
+                    <div class="form-row">
+                         <label for="card-number">Número de tarjeta</label>
+                        <input type="text" id="card-number" placeholder="&#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; &#9679;&#9679;&#9679;&#9679; 1234">
+                    </div>
+                    <div class="form-row-group">
+                        <div class="form-row">
+                            <label for="card-expiry">Expiración (MM/AA)</label>
+                            <input type="text" id="card-expiry" placeholder="12/28">
+                        </div>
+                        <div class="form-row">
+                             <label for="card-cvc">CVC</label>
+                            <input type="text" id="card-cvc" placeholder="&#9679;&#9679;&#9679;">
+                        </div>
+                    </div>
+                     <button class="modal-action-btn">Actualizar Pago</button>
+                </form>
+             </div>
+        </div>
+
+    </div>
+
+    <script src="Configuracion.js"></script>
+</body>
+</html>

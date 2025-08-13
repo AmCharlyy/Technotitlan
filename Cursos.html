@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos</title>
+    <link rel="stylesheet" href="Cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i><i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" class="active" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">CURSOS</h1>
+                <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder="Buscar cursos..."><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="course-catalog-container">
+                <!-- Sección de Programación -->
+                <section class="category-section">
+                    <h2 class="category-title">Programación</h2>
+                    <div class="category-wrapper">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="course-carousel">
+                            <!-- Tarjetas de cursos aquí -->
+                            <article class="course-item-card">
+                                <div class="card-image"><img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1470" alt="Curso de HTML y CSS"></div>
+                                <div class="card-content">
+                                    <h3>HTML y CSS: De Cero a Experto</h3><p>Construye sitios web modernos y responsivos desde las bases.</p>
+                                    <div class="card-meta"><span class="tag">Principiante</span></div>
+                                    <div class="card-actions"><button class="btn-secondary syllabus-btn" data-syllabus="html-css">Ver Temario</button><button class="btn-primary">Iniciar Curso</button></div>
+                                </div>
+                            </article>
+                            <article class="course-item-card">
+                                <div class="card-image"><img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=1470" alt="Curso de React.js"></div>
+                                <div class="card-content">
+                                    <h3>React.js: Interfaces Interactivas</h3><p>Crea aplicaciones de una sola página (SPA) con la librería más popular.</p>
+                                    <div class="card-meta"><span class="tag">Intermedio</span></div>
+                                    <div class="card-actions"><button class="btn-secondary syllabus-btn" data-syllabus="react-js">Ver Temario</button><button class="btn-primary">Iniciar Curso</button></div>
+                                </div>
+                            </article>
+                            <!-- ... más tarjetas ... -->
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+
+                <!-- Sección de Electrónica -->
+                <section class="category-section">
+                    <h2 class="category-title">Electrónica</h2>
+                    <div class="category-wrapper">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="course-carousel">
+                            <article class="course-item-card">
+                                <div class="card-image"><img src="https://images.unsplash.com/photo-1581092921462-2b71b3e7e641?q=80&w=1470" alt="Curso de Arduino"></div>
+                                <div class="card-content">
+                                    <h3>Arduino para Principiantes</h3><p>Aprende a crear proyectos interactivos con la plataforma Arduino.</p>
+                                    <div class="card-meta"><span class="tag">Principiante</span></div>
+                                    <div class="card-actions"><button class="btn-secondary syllabus-btn" data-syllabus="arduino">Ver Temario</button><button class="btn-primary">Iniciar Curso</button></div>
+                                </div>
+                            </article>
+                            <article class="course-item-card">
+                                <div class="card-image"><img src="https://images.unsplash.com/photo-1598369325992-3158d5a6b08f?q=80&w=1374" alt="Curso de Circuitos"></div>
+                                <div class="card-content">
+                                    <h3>Análisis de Circuitos Eléctricos</h3><p>Entiende los fundamentos de los circuitos AC y DC.</p>
+                                    <div class="card-meta"><span class="tag">Avanzado</span></div>
+                                    <div class="card-actions"><button class="btn-secondary syllabus-btn" data-syllabus="circuits">Ver Temario</button><button class="btn-primary">Iniciar Curso</button></div>
+                                </div>
+                            </article>
+                            <!-- ... más tarjetas ... -->
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+                
+                 <!-- Sección de Diseño -->
+                <section class="category-section">
+                    <h2 class="category-title">Diseño y UX</h2>
+                    <div class="category-wrapper">
+                        <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                        <div class="course-carousel">
+                             <article class="course-item-card">
+                                <div class="card-image"><img src="https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=1471" alt="Curso de Figma"></div>
+                                <div class="card-content">
+                                    <h3>Diseño de UI/UX con Figma</h3><p>Prototipa y diseña interfaces de usuario de alta fidelidad.</p>
+                                    <div class="card-meta"><span class="tag">Intermedio</span></div>
+                                    <div class="card-actions"><button class="btn-secondary syllabus-btn" data-syllabus="figma-ui">Ver Temario</button><button class="btn-primary">Iniciar Curso</button></div>
+                                </div>
+                            </article>
+                            <!-- ... más tarjetas ... -->
+                        </div>
+                        <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </section>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ===== VENTANA MODAL para Temario (Oculta por defecto) ===== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="syllabus-modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Temario del Curso</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- El contenido del temario se inyectará aquí -->
+            </div>
+        </div>
+    </div>
+
+    <script src="Cursos.js"></script>
+</body>
+</html>

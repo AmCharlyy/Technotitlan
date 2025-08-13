@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Cuenta</title>
+    <link rel="stylesheet" href="Cuenta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i>
+                    <i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" class="active" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">CUENTA</h1>
+                 <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder=""><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="profile-container">
+                <div class="profile-card">
+                    <!-- Sección Izquierda: Información del Perfil -->
+                    <div class="profile-main">
+                        <div class="profile-picture">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-name">
+                            <label>Nombre</label>
+                            <p>Usuario Genial</p>
+                        </div>
+                        <div class="friends-section">
+                            <h3>Amigos</h3>
+                            <div class="add-friends-box">
+                                <p>¿No tienes amigos?</p>
+                                <a href="#" id="add-friend-link">Agregar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sección Derecha: Estadísticas -->
+                    <div class="profile-stats">
+                        <ul>
+                            <li><i class="fas fa-trophy"></i><span>Logros</span></li>
+                            <li><i class="fas fa-bullseye"></i><span>Progreso</span></li>
+                            <li><i class="fas fa-award"></i><span>EXP</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ===== VENTANA MODAL para Agregar Amigo (Oculta por defecto) ===== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Agregar Amigo</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body-friends">
+                <h4>Comparte tu código</h4>
+                <div class="friend-code-area">
+                    <span id="my-friend-code">------</span>
+                    <button id="copy-code-btn" title="Copiar código"><i class="far fa-copy"></i></button>
+                </div>
+                <button class="generate-btn" id="generate-code-btn">Generar nuevo código</button>
+                <hr class="modal-divider">
+                <h4>Añadir con un código</h4>
+                <div class="add-code-area">
+                    <input type="text" id="add-friend-input" placeholder="Ingresa el código de amigo...">
+                    <button class="add-btn">Añadir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Cuenta.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Soporte</title>
+    <link rel="stylesheet" href="Ayuda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i><i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" class="active" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <!-- El header se omite en esta vista para dar más protagonismo al contenido de ayuda -->
+
+            <div class="help-center-container">
+                <!-- Sección de Búsqueda -->
+                <section class="hero-section">
+                    <h1>Hola, ¿en qué podemos ayudarte?</h1>
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Busca en nuestros artículos de ayuda...">
+                    </div>
+                </section>
+
+                <!-- Sección de Categorías -->
+                <section class="category-grid">
+                    <a href="#" class="category-card">
+                        <i class="fas fa-user-gear"></i>
+                        <h4>Mi Cuenta</h4>
+                        <p>Gestiona tu perfil y seguridad.</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h4>Planes y Pagos</h4>
+                        <p>Todo sobre suscripciones.</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Simulador</h4>
+                        <p>Guías y solución de problemas.</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <h4>Privacidad</h4>
+                        <p>Cómo protegemos tus datos.</p>
+                    </a>
+                </section>
+
+                <!-- Sección de Preguntas Frecuentes (FAQ) -->
+                <section class="faq-section">
+                    <h2>Preguntas Frecuentes</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Cómo puedo cambiar mi contraseña?</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Puedes cambiar tu contraseña desde la sección "Configuración", en el apartado de "Privacidad y Seguridad". Te enviaremos un correo electrónico de confirmación para verificar tu identidad.</p>
+                            </div>
+                        </div>
+                         <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Qué métodos de pago aceptan?</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Aceptamos las principales tarjetas de crédito y débito (Visa, MasterCard, American Express) a través de nuestro procesador de pagos seguro. Puedes actualizar tu método de pago en "Configuración" > "Actualizar Método de Pago".</p>
+                            </div>
+                        </div>
+                         <div class="faq-item">
+                            <button class="faq-question">
+                                <span>El simulador no carga, ¿qué hago?</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Asegúrate de tener una conexión a internet estable y de que tu navegador esté actualizado. Intenta borrar la caché de tu navegador. Si el problema persiste, por favor, ponte en contacto con nuestro equipo de soporte técnico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección de Contacto -->
+                <section class="contact-section">
+                    <h2>¿Aún necesitas ayuda?</h2>
+                    <p>Nuestro equipo de soporte está listo para asistirte.</p>
+                    <button class="contact-button">Contactar Soporte</button>
+                </section>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="Ayuda.js"></script>
+</body>
+</html>

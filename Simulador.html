@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de PC</title>
+    <link rel="stylesheet" href="Simulador.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ===== PANEL LATERAL (SIDEBAR) ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="toggle-btn" id="toggle-btn">
+                    <i class="fas fa-xmark icon-close"></i>
+                    <i class="fas fa-bars icon-menu"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="Index.html" title="Inicio"><i class="fas fa-house"></i><span>Inicio</span></a></li>
+                    <li><a href="Asistente.html" title="Asistente"><i class="fas fa-robot"></i><span>Asistente</span></a></li>
+                    <li><a href="Herramientas.html" title="Herramientas"><i class="fas fa-table-cells-large"></i><span>Herramientas</span></a></li>
+                    <li><a href="Cursos.html" title="Cursos"><i class="fas fa-book-open"></i><span>Cursos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Simulador.html" class="active" title="Simulador"><i class="fas fa-laptop-code"></i><span>Simulador</span></a></li>
+                    <li><a href="#" title="Electrónica"><i class="fas fa-microchip"></i><span>Electrónica</span></a></li>
+                    <li><a href="Proyectos.html" title="Proyectos"><i class="fas fa-folder"></i><span>Proyectos</span></a></li>
+                    <div class="divider"></div>
+                    <li><a href="Ayuda.html" title="Ayuda"><i class="fas fa-circle-question"></i><span>Ayuda</span></a></li>
+                    <li><a href="Cuenta.html" title="Cuenta"><i class="fas fa-user-gear"></i><span>Cuenta</span></a></li>
+                    <li><a href="Configuracion.html" title="Configuración"><i class="fas fa-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <main class="main-content" id="main-content">
+            <header class="main-header">
+                <h1 class="page-title">Simulador</h1>
+                <div class="header-actions">
+                    <div class="search-bar"><input type="text" placeholder=""><i class="fas fa-search search-icon"></i></div>
+                    <button class="icon-btn"><i class="fas fa-ellipsis"></i></button>
+                    <button class="icon-btn"><i class="fas fa-envelope"></i></button>
+                    <button class="icon-btn profile-btn"></button>
+                </div>
+            </header>
+
+            <div class="simulator-container">
+                <!-- Zona de visualización y resumen del PC -->
+                <div class="pc-build-area">
+                    <div class="pc-build-viewer">
+                        <img src="https://i.ibb.co/L5k6hW7/pc-case-build.png" alt="Vista previa del ensamblaje de PC">
+                    </div>
+                    <div class="build-summary" id="build-summary">
+                        <h3>Componentes Seleccionados</h3>
+                        <ul id="summary-list">
+                            <li class="placeholder">Selecciona un componente de la bandeja inferior para empezar.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bandeja de componentes seleccionables -->
+                <div class="component-tray">
+                    <button class="component-item" data-component="procesador">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M12 1h40v11h11v40H53v11H12V53H1V12h11zM1 12h11M1 52h11M52 1h11M52 63h11M12 1v11M52 1v11M12 63v-11M52 63v-11M20 20h24v24H20z"/><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M1 23h11M1 41h11M52 23h11M52 41h11M23 1v11M41 1v11M23 63v-11M41 63v-11"/></svg></div>
+                        <span class="component-label">PROCESADOR</span>
+                    </button>
+                    <button class="component-item" data-component="ram">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M1 20h62v24H1z"/><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M6 20v-4h4v4M16 20v-4h4v4M26 20v-4h4v4M36 20v-4h4v4M46 20v-4h4v4M54 20v-4h4v4M6 44v4h4v-4M16 44v4h4v-4M26 44v4h4v-4M36 44v4h4v-4M46 44v4h4v-4M54 44v4h4v-4M32 44v-4"/></svg></div>
+                        <span class="component-label">RAM</span>
+                    </button>
+                    <button class="component-item" data-component="tarjeta_grafica">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><g fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10"><path d="M1 21h62v22H1z"/><path d="M10 21V10h44v11M17 10h-2V6h26v4h-2"/><circle cx="23" cy="32" r="6"/><circle cx="41" cy="32" r="6"/><path d="m26 29-6 6M20 29l6 6m15-6-6 6m-3-6 6 6"/></g></svg></div>
+                        <span class="component-label">TARJETA GRÁFICA</span>
+                    </button>
+                    <button class="component-item" data-component="m_board">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M1 1h62v62H1z"/><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M11 11h24v12H11zM11 30h12v12H11zM11 50h42M30 30h23v12H30zM45 11h8v8h-8zM7 7v4M7 17v4M7 27v4M7 37v4M7 47v4M57 7v4M57 17v4M57 27v4M57 37v4M57 47v4"/></svg></div>
+                        <span class="component-label">M. BOARD</span>
+                    </button>
+                    <button class="component-item" data-component="almacenamiento">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M11 1h42v62H11z"/><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M53 9H11M11 55h42"/><circle fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="14"/><circle fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" cx="32" cy="32" r="4"/></svg></div>
+                        <span class="component-label">ALMACENAMIENTO</span>
+                    </button>
+                    <button class="component-item" data-component="gabinete">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M12 1h40v62H12zM21 51h22v6H21z"/><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M26 10h12v4H26zM29 19h6M29 25h6M29 31h6M29 37h6"/></svg></div>
+                        <span class="component-label">GABINETE</span>
+                    </button>
+                    <button class="component-item" data-component="refrigeracion">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><g fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10"><path d="M1 1h62v62H1z"/><circle cx="32" cy="32" r="16"/><path d="M32 16v-4M32 52v-4M48 32h4M12 32h4M42.7 19.3l2.8-2.8M15.5 48.5l2.8-2.8M18.5 19.3l-2.8-2.8M45.5 48.5l-2.8-2.8"/><circle cx="32" cy="32" r="5"/><path d="M32 27V16M32 48v-11M27 32H16M48 32H37"/></g></svg></div>
+                        <span class="component-label">REFRIGERACIÓN</span>
+                    </button>
+                     <button class="component-item" data-component="fuente">
+                        <div class="component-icon"><svg viewBox="0 0 64 64"><path fill="none" stroke="#333" stroke-width="2" stroke-miterlimit="10" d="M12 13h40v38H12zM52 20v-7h-5M12 20v-7h5M22 51v8h20v-8M28 59h8M1 20h11M52 20h11"/><circle cx="32" cy="32" r="7"/><path d="M32 25v-4M32 43v-4M39 32h4M21 32h4M36.9 27.1l2.8-2.8M23.3 40.7l2.8-2.8M27.1 27.1l-2.8-2.8M40.7 40.7l-2.8-2.8"/></svg></div>
+                        <span class="component-label">FUENTE</span>
+                    </button>
+                </div>
+            </div>
+            
+            <footer class="main-footer-bottom">
+                <p>© 2025 MIEmpresaGenial.com. Todos los derechos reservados.</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- ===== VENTANA MODAL (Oculta por defecto) ===== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Seleccionar Componente</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- El contenido se generará con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="Simulador.js"></script>
+</body>
+</html>
